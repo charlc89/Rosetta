@@ -30,4 +30,6 @@ The loop file should be named as {name}.loop
 -nstruct 10 <br>
 -relax:default_repeats 5** <br>
 The nstruct should be 5-15
+###### 2. Run the code 
+` /Users/charles/Documents/Rosetta/main/source/bin/relax.default.macosclangrelease @flag_relax `
 ### Select the lowest scoring model 
