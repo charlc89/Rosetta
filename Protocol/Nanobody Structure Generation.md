@@ -1,8 +1,8 @@
 ### Next-Generation Kinematic Loop Closure (NGK)
-To perform a loop closure in Rosetta, firstly prepare a flag file: <br>
+###### 1. Create a flag file: <br>
   **-in:file:s {name}.pdb <br>
 -in:file:fullatom <br>
--loops:loop_file cbCDR3.loops <br>
+-loops:loop_file {name}.loops <br>
 -nstruct 500** <br>
 
 **-loops:fast <br>
@@ -16,4 +16,10 @@ To perform a loop closure in Rosetta, firstly prepare a flag file: <br>
 
 **-out:file:fullatom<br>
 -out:file:scorefile {name}.fasc** <br>
-The file name can be {name}.loops 
+To have a producitve run, nstruct should be set as 500 and the attempts should be 250
+###### 2. Create a loop file
+**LOOP 115 118 0 0 1**
+The loop file should be named as {name}.loop
+###### 3. Run the code 
+` /Users/charles/Documents/Rosetta/main/source/bin/loopmodel.default.macosclangrelease @flag_NGK `
+
